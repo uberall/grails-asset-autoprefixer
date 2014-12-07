@@ -1,7 +1,7 @@
 package asset.pipeline
 
 /**
- * Created by philipp on 03/12/14.
+ * @author philipp
  */
 class AutoprefixedAssetFile extends AbstractAssetFile {
     static final String contentType = 'text/css'
