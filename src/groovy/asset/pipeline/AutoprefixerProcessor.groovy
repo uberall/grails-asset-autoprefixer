@@ -5,7 +5,7 @@ import org.mozilla.javascript.Scriptable
 
 class AutoprefixerProcessor extends AbstractProcessor {
 
-    public static final ThreadLocal threadLocal = new ThreadLocal();
+    public static final ThreadLocal threadLocal = new ThreadLocal()
     Scriptable globalScope
     ClassLoader classLoader
     def browsers
@@ -25,20 +25,18 @@ class AutoprefixerProcessor extends AbstractProcessor {
 
     String process(String input, AssetFile assetFile) {
         try {
-            threadLocal.set(assetFile);
+            threadLocal.set(assetFile)
 
             def cx = Context.enter()
             def compileScope = cx.newObject(globalScope)
             compileScope.setParentScope(globalScope)
             compileScope.put("lessSrc", compileScope, input)
             compileScope.put("browserArray", compileScope, browsers)
-            def result = cx.evaluateString(compileScope, "autoprefixer({ browsers: browserArray, cascade: false }).process(lessSrc)", "autoprefix command", 0, null)
-            return result.toString()
+            cx.evaluateString(compileScope, "autoprefixer({ browsers: browserArray, cascade: false }).process(lessSrc)", "autoprefix command", 0, null)
         } catch (Exception e) {
-            throw new Exception("Autoprefixing failed: $e")
+            throw new Exception("Autoprefixing failed: $e", e)
         } finally {
             Context.exit()
         }
     }
-
 }

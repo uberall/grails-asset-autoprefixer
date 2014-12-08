@@ -1,7 +1,6 @@
 class AssetAutoprefixerGrailsPlugin {
     def version = '1.0'
     def grailsVersion = '2.2 > *'
-    def dependsOn = ['asset-pipeline': '2.0 > *']
     def title = 'Asset Autoprefixer Plugin'
     def author = 'Philipp Eschenbach'
     def authorEmail = 'philipp@uberall.com'
