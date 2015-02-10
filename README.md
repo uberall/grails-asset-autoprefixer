@@ -15,9 +15,15 @@ Usage
 -------------
 Add
 
-    compile ":asset-autoprefixer:1.0"
+    mavenRepo "https://raw.github.com/uberall/uberall-plugins/mvn-repo"
 
-to your BuildConfig.groovy.
+
+to your repositories and
+
+    compile ":asset-autoprefixer:1.1.3"
+
+
+to your plugins in BuildConfig.groovy.
 
 You must also have asset-pipeline installed in your app with a version greater than 2.0
 
