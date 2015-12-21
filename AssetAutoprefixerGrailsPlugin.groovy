@@ -1,5 +1,5 @@
 class AssetAutoprefixerGrailsPlugin {
-    def version = '1.1.3'
+    def version = '1.3.0'
     def grailsVersion = '2.2 > *'
     def title = 'Asset Autoprefixer Plugin'
     def author = 'Philipp Eschenbach'

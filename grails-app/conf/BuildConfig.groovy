@@ -18,7 +18,7 @@ grails.project.dependency.resolution = {
         mavenRepo "https://raw.github.com/uberall/uberall-plugins/mvn-repo/"
     }
     dependencies {
-        compile('com.uberall.plugins:autoprefixer-asset-pipeline:1.0.3')
+        compile('com.uberall.plugins:autoprefixer-asset-pipeline:1.3.0')
     }
 
     plugins {
